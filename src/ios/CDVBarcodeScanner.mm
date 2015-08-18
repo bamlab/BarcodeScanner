@@ -586,7 +586,7 @@ parentViewController:(UIViewController*)parentViewController
     uint8_t* baseAddress = (uint8_t*) CVPixelBufferGetBaseAddress(imageBuffer);
     
     // only going to get 90% of the min(width,height) of the captured image
-    size_t    greyWidth  = 9 * MIN(width, height) / 10;
+    size_t    greyWidth  = 5 * MIN(width, height) / 10;
     uint8_t*  greyData   = (uint8_t*) malloc(greyWidth * greyWidth);
     
     // remember this pointer so we can free it later
@@ -952,7 +952,7 @@ parentViewController:(UIViewController*)parentViewController
     
     UIImage* reticleImage = [self buildReticleImage];
     UIView* reticleView = [[UIImageView alloc] initWithImage: reticleImage];
-    CGFloat minAxis = MIN(rootViewHeight, rootViewWidth);
+    CGFloat minAxis = MIN(rootViewHeight, rootViewWidth)*0.5;
     
     rectArea = CGRectMake(
                           0.5 * (rootViewWidth  - minAxis),

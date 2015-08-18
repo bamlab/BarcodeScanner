@@ -1,5 +1,9 @@
-# PhoneGap Plugin BarcodeScanner
+# PhoneGap Plugin BarcodeScanner fork for reducing scan area
 ================================
+
+##To build for android
+See [StackOverflow link](http://stackoverflow.com/questions/25832824/phonegap-barcode-scanner-settings)
+
 
 [![Build Status](https://travis-ci.org/phonegap/phonegap-plugin-barcodescanner.svg)](https://travis-ci.org/phonegap/phonegap-plugin-barcodescanner)
 
@@ -11,7 +15,7 @@ Follows the [Cordova Plugin spec](http://cordova.apache.org/docs/en/5.0.0/plugin
 
 ## Installation
 
-    
+
 This requires phonegap 5.0+ ( current stable v3.0.0 )
 
     phonegap plugin add phonegap-plugin-barcodescanner
@@ -39,7 +43,7 @@ prebuilt as a jar library. Any updates to the Library Project should be
 committed with an updated jar.
 
 ## Using the plugin ##
-The plugin creates the object `cordova/plugin/BarcodeScanner` with the method `scan(success, fail)`. 
+The plugin creates the object `cordova/plugin/BarcodeScanner` with the method `scan(success, fail)`.
 
 The following barcode types are currently supported:
 ### Android
@@ -128,7 +132,7 @@ A full example could be:
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
-      }, 
+      },
       function (error) {
           alert("Scanning failed: " + error);
       }
@@ -137,7 +141,7 @@ A full example could be:
 
 ## Encoding a Barcode ##
 
-The plugin creates the object `cordova.plugins.barcodeScanner` with the method `encode(type, data, success, fail)`. 
+The plugin creates the object `cordova.plugins.barcodeScanner` with the method `encode(type, data, success, fail)`.
 
 Supported encoding types:
 
@@ -169,7 +173,7 @@ Cancelling a scan on BlackBerry 10 is done by touching the screen.
 
 ## Thanks on Github ##
 
-So many -- check out the original [iOS](https://github.com/phonegap/phonegap-plugins/tree/DEPRECATED/iOS/BarcodeScanner),  [Android](https://github.com/phonegap/phonegap-plugins/tree/DEPRECATED/Android/BarcodeScanner) and 
+So many -- check out the original [iOS](https://github.com/phonegap/phonegap-plugins/tree/DEPRECATED/iOS/BarcodeScanner),  [Android](https://github.com/phonegap/phonegap-plugins/tree/DEPRECATED/Android/BarcodeScanner) and
 [BlackBerry 10](https://github.com/blackberry/WebWorks-Community-APIs/tree/master/BB10-Cordova/BarcodeScanner) repos.
 
 ## Licence ##
